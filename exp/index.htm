@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<head>
+    <script src="in.js"></script>
+    <link href="style1.css" rel="stylesheet">
+</head>
+<body>
+    <button onclick="fet()"></button>
+
+
+    <div id = "secondBody">
+    <table >
+        <tr>
+            <td id="searchtd">
+                <table >
+                    <tr><td id="AccessTD">
+                        
+                            <input class="txtinput" name="vorname" id ="vorname" type="text" placeholder ="Vorname" required>
+                            <input class="txtinput" name="nachname" id ="nachname" type="text" placeholder ="Nachname" required>
+                            <input class="numinput" name="kundeid" id ="kundeid" type="number"  min="0" placeholder ="ID" required >
+                            <input class="numinput" name="adresseid" id ="adresseid" type="number" placeholder ="AdresseID" min="0">
+                            <input class="numinput" name="messlokationid" id ="messlokationid" type="number" placeholder ="MSID" min="0">
+                            <fieldset>
+                                <div><input type="radio" class="mc" name="Zahlmethode" value="Mastercard" onclick="notRed()">
+                                <label for="mc"> Kunde suchen</label> </div>
+                                <div></div><input type="radio" class="mc" id="addRadio" name="Zahlmethode" value="Visa">
+                                <label for="vi"> Kunde zufügen</label> </div>
+                              </fieldset>
+                            <div id="subButtonHolder"><Button  id= "submit" onclick="updateSearch()" ><img src="54746-200.png"></Button> </div>
+                        
+                    </td></tr>
+                    <tr><td>
+
+                        <form action="addd" method="POST" id="toD">
+                            <input name="kundeid" id ="kundeid" type="number"  min="0" placeholder ="ID" required>
+                            <input name="vorname" id ="vorname" type="text" placeholder ="Vorname" required>
+                            <input name="nachname" id ="nachname" type="text" placeholder ="Nachname" required>
+                            <input name="adresseid" id ="adresseid" type="number" placeholder ="AdresseID" min="0">
+                            <input name="messlokationid" id ="messlokationid" type="number" placeholder ="MSID" min="0">
+                            <Button type="submit" id= "submit" ><img src="54746-200.png" ></Button>
+                        </form>
+                    </td></tr>
+                </table>
+            </td>
+            <td id="costumerstd">
+                <table id="costumers">
+                    <tr>
+                        <th>KundeID</th>
+                        <th>Vorname</th>
+                        <th>Nachname</th>
+                        <th>AdresseID</th>
+                        <th>MLID</th>
+                        <th></th>
+                        <th></th>
+                        
+                    </tr>
+                    <tr class="costumer" id="0"><td>
+                        <input class= "forEdit"type=text>
+                    </td>
+                    <td>
+                        <input class= "forEdit" type=text>
+                    </td>
+                    <td>
+                        <input class= "forEdit" type=text>
+                    </td>
+                    <td>
+                        <input class= "forEdit" type=text>
+                    </td>
+                    <td>
+                        <input class= "forEdit" type=text>
+                    </td>
+                    <td><button id="u0" class="Bimg"  onclick="Update(this)"><img src="pen.png" class="img"></button></td><td><button id="d0" class="Bimg" onclick="Delete(this)"><img src="rubbish.png" class="img"></button></td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<button onclick="Delete()">
+
+</button>
+
+
+
+    
+</body>
